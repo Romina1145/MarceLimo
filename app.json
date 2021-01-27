@@ -1,14 +1,20 @@
 {
   "expo": {
-    "name": "MyFirstApp",
-    "slug": "MyFirstApp",
+    "name": "MarceLimo",
+    "slug": "MarceLimo",
+    "privacy": "unlisted",
     "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./app/assets/new.png",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "image": "./app/assets/new.png"
+    
+    
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -17,16 +23,33 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.codewithromy.MarceLimo",
+      "buildNumber": "1.0.0"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./app/assets/new.png",
         "backgroundColor": "#FFFFFF"
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "description": "Luxury and professional limo services provided by MarceLimo and his awesome team!",
+  
+    "extra": {
+      "bugsnag": {
+        "apiKey": "edba9efb9946d1941e91ba416951de74"
+      }
+    },
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "@bugsnag/expo/hooks/post-publish.js",
+          "config": {}
+        }
+      ]
     }
   }
 }
